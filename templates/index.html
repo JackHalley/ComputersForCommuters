@@ -16,6 +16,45 @@
             padding: 60px 0;
             text-align: center;
         }
+        .nav {
+    background-color: #007bff;
+    padding: 10px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav a:last-child {
+    margin-right: 0;
+}
+
+.nav a:hover {
+    background-color: #0056b3;
+}
+
         .container {
             margin: 50px auto;
         }
@@ -30,13 +69,33 @@
         }
         footer {
             margin-top: 40px;
+            padding: 10px 0;
+            background-color: #f4f4f8;
             text-align: center;
             color: #7d7d7d;
+        }
+        footer a {
+            color: #7d7d7d;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="nav">
+    <a href="#" class="nav-brand">Bus Ride Bytes</a>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
     <div class="header">
+        <img src="/path/to/your/logo.png" alt="Bus Ride Bytes Logo">
         <h1>Bus Ride Bytes</h1>
         <p>Digestible Code Concepts for Commuters</p>
         <p>Dive into the world of coding during your daily commute!</p>
@@ -46,6 +105,7 @@
         <h2>About the Book</h2>
         <p>"Bus Ride Bytes" simplifies complex programming concepts into bitesized lessons perfect for your short journeys.</p>
         <div class="author-card">
+            <img src="/path/to/your/author/image.png" alt="Author Image">
             <h3>[Your Name]</h3>
             <p>[Your Name] is a software enthusiast with a passion for making tech accessible.</p>
         </div>
@@ -56,13 +116,16 @@
             <div class="input-group-append">
                 <button class="btn btn-cta" type="submit">Notify Me!</button>
             </div>
-        </div>
+                    </div>
     </div>
     <footer>
-        <p>Follow us on: Twitter , Facebook , LinkedIn</p>
-        <p>Contact: Contact@email.com</p>
+        <p>Follow us on:</p>
+        <a href="#" target="_blank">Twitter</a>,
+        <a href="#" target="_blank">Facebook</a>,
+        <a href="#" target="_blank">LinkedIn</a>
+        <p>Contact: <a href="mailto:Contact@email.com">Contact@email.com</a></p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
