@@ -6,11 +6,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///emails.db'
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 db = SQLAlchemy(app)
 
-
 class Email(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -26,7 +24,7 @@ def index():
         return redirect('/')
     return render_template('index.html')
 
-
 if __name__ == '__main__':
-    db.create_all()
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
